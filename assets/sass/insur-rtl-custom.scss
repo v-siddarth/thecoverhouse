@@ -1,0 +1,24 @@
+body {
+	overflow-x: hidden;
+}
+
+.owl-carousel {
+	direction: ltr;
+}
+
+.owl-carousel .owl-item {
+	direction: rtl;
+}
+
+.main-slider .image-layer:before {
+	background-image: linear-gradient(-90deg, rgb(243, 246, 248) 0%, rgba(243, 246, 248, 0) 100%)
+}
+
+.why-choose-one-img {
+	top: -75px;
+	left: -140px;
+}
+
+.why-choose-one-img img {
+	box-shadow: 14.979px 0.785px 60px 0px rgba(0, 0, 0, 0.1);
+}

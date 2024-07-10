@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'insur-three-icon';
+  src:  url('fonts/insur-three-icon.eot?adjy0j');
+  src:  url('fonts/insur-three-icon.eot?adjy0j#iefix') format('embedded-opentype'),
+    url('fonts/insur-three-icon.ttf?adjy0j') format('truetype'),
+    url('fonts/insur-three-icon.woff?adjy0j') format('woff'),
+    url('fonts/insur-three-icon.svg?adjy0j#insur-three-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="insur-three-icon-"], [class*=" insur-three-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'insur-three-icon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.insur-three-icon-insurance:before {
+  content: "\e900";
+}
+.insur-three-icon-cashback:before {
+  content: "\e901";
+}
+.insur-three-icon-house:before {
+  content: "\e902";
+}
+.insur-three-icon-car:before {
+  content: "\e903";
+}
+.insur-three-icon-cardiogram:before {
+  content: "\e904";
+}
+.insur-three-icon-home:before {
+  content: "\e905";
+}
+.insur-three-icon-cross:before {
+  content: "\e906";
+}
+.insur-three-icon-maternity:before {
+  content: "\e907";
+}
+.insur-three-icon-pdf-file:before {
+  content: "\e908";
+}
+.insur-three-icon-call:before {
+  content: "\e909";
+}
+.insur-three-icon-documents:before {
+  content: "\e90a";
+}
+.insur-three-icon-id-card:before {
+  content: "\e90b";
+}
+.insur-three-icon-referral-code:before {
+  content: "\e90c";
+}

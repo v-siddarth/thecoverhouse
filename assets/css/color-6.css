@@ -1,0 +1,13 @@
+:root {
+  --insur-font: "Manrope", sans-serif;
+  --insur-gray: #737092;
+  --insur-gray-rgb: 115, 112, 146;
+  --insur-base: #7166F5;
+  --insur-base-rgb: 113, 102, 245;
+  --insur-black: #211F38;
+  --insur-black-rgb: 33, 31, 56;
+  --insur-extra: #F5F5F5;
+  --insur-extra-rgb: 245, 245, 245;
+  --insur-bdr-color: #D0CCFF;
+  --insur-bdr-color-rgb: 208, 204, 255;
+}

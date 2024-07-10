@@ -1,0 +1,13 @@
+:root {
+  --insur-font: "Plus Jakarta Sans", sans-serif;
+  --insur-gray: #9D9EA4;
+  --insur-gray-rgb: 157, 158, 164;
+  --insur-base: #F5A526;
+  --insur-base-rgb: 245, 165, 38;
+  --insur-black: #171827;
+  --insur-black-rgb: 23, 24, 39;
+  --insur-extra: #F4F4F4;
+  --insur-extra-rgb: 244, 244, 244;
+  --insur-bdr-color: #FFE2B9;
+  --insur-bdr-color-rgb: 255, 226, 185;
+}

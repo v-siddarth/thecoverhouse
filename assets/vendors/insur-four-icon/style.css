@@ -1,0 +1,93 @@
+@font-face {
+  font-family: 'insur-four-icon';
+  src:  url('fonts/insur-four-icon.eot?lz4a3r');
+  src:  url('fonts/insur-four-icon.eot?lz4a3r#iefix') format('embedded-opentype'),
+    url('fonts/insur-four-icon.ttf?lz4a3r') format('truetype'),
+    url('fonts/insur-four-icon.woff?lz4a3r') format('woff'),
+    url('fonts/insur-four-icon.svg?lz4a3r#insur-four-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="insur-four-icon-"], [class*=" insur-four-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'insur-four-icon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.insur-four-icon-arrow-righ-two:before {
+  content: "\e909";
+}
+.insur-four-icon-arrow-left-two:before {
+  content: "\e90c";
+}
+.insur-four-icon-quote:before {
+  content: "\e912";
+}
+.insur-four-icon-check:before {
+  content: "\e900";
+}
+.insur-four-icon-jar:before {
+  content: "\e913";
+}
+.insur-four-icon-checked:before {
+  content: "\e914";
+}
+.insur-four-icon-rating:before {
+  content: "\e915";
+}
+.insur-four-icon-2989907:before {
+  content: "\e901";
+}
+.insur-four-icon-banking:before {
+  content: "\e902";
+}
+.insur-four-icon-costumer:before {
+  content: "\e903";
+}
+.insur-four-icon-globe:before {
+  content: "\e904";
+}
+.insur-four-icon-governance:before {
+  content: "\e905";
+}
+.insur-four-icon-icon:before {
+  content: "\e906";
+}
+.insur-four-icon-insurance:before {
+  content: "\e907";
+}
+.insur-four-icon-investment:before {
+  content: "\e908";
+}
+.insur-four-icon-phone-call:before {
+  content: "\e90a";
+}
+.insur-four-icon-ping:before {
+  content: "\e90b";
+}
+.insur-four-icon-right-arrow:before {
+  content: "\e90d";
+}
+.insur-four-icon-left-arrow:before {
+  content: "\e90e";
+}
+.insur-four-icon-safety:before {
+  content: "\e90f";
+}
+.insur-four-icon-share:before {
+  content: "\e910";
+}
+.insur-four-icon-trolley-cart:before {
+  content: "\e911";
+}

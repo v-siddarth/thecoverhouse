@@ -1,0 +1,34 @@
+:root {
+  --insur-font: 'Outfit', sans-serif;
+  --insur-font-two: 'Poppins', sans-serif;
+  --insur-gray: #757E82;
+  --insur-gray-rgb: 117, 126, 130;
+  --insur-base: #00CDE5;
+  --insur-base-rgb: 0, 205, 229;
+  --insur-black: #023A51;
+  --insur-black-rgb: 2, 58, 81;
+  --insur-primary: #F7F7F7;
+  --insur-primary-rgb: 247, 247, 247;
+
+}
+
+.row {
+  --bs-gutter-x: 36px;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1350px;
+  }
+}
+
+
+.mobile-nav__content .main-menu__list>li>a>button,
+.mobile-nav__content .main-menu__list>li>ul>li>a>button,
+.mobile-nav__content .main-menu__list>li>ul>li>ul>li>a>button {
+  background-color: var(--insur-base);
+}
+
+.mobile-nav__contact li>i {
+  background-color: var(--insur-base);
+}

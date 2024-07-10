@@ -1,0 +1,21 @@
+:root {
+  --insur-font-three: "Outfit", sans-serif;
+  --insur-gray: #757E82;
+  --insur-gray-rgb: 117, 126, 130;
+  --insur-base: #00868C;
+  --insur-base-rgb: 0, 134, 140;
+  --insur-black: #181818;
+  --insur-black-rgb: 24, 24, 24;
+  --insur-primary: #FE4D05;
+  --insur-primary-rgb: 254, 77, 5;
+}
+
+.row {
+  --bs-gutter-x: 36px;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1350px;
+  }
+}
