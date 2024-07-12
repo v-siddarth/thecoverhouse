@@ -1959,15 +1959,19 @@
                 <div class="footer-widget__column footer-widget__newsletter">
                   <h3 class="footer-widget__title">Newsletter</h3>
                   <p class="footer-widget__newsletter-text">
-                    Subscribe our newsletter to get our <br />
+                    Subscribe too newsletter to get our <br />
                     latest update & news.
                   </p>
-                  <form class="footer-widget__newsletter-form">
+                  <form
+                    id="footerNewsletterForm"
+                    class="footer-widget__newsletter-form"
+                  >
                     <div class="footer-widget__newsletter-input-box">
                       <input
                         type="email"
                         placeholder="Email address"
                         name="email"
+                        id="footerEmail"
                       />
                       <button
                         type="submit"
@@ -1977,6 +1981,7 @@
                       </button>
                     </div>
                   </form>
+
                   <div class="footer-widget__phone">
                     <div class="footer-widget__phone-icon">
                       <span class="icon-telephone"></span>
@@ -2104,20 +2109,16 @@
   </body>
 </html>
 <script>
-  document
-    .getElementById("insuranceForm")
-    .addEventListener("submit", function (event) {
+  document.addEventListener("DOMContentLoaded", function () {
+    function handleFormSubmit(event) {
       event.preventDefault();
+      const form = event.target;
+      const formData = new FormData(form);
 
-      const name = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
-      const insuranceType = document.getElementById("insuranceType").value;
-
-      const data = {
-        name: name,
-        email: email,
-        insuranceType: insuranceType,
-      };
+      const data = {};
+      formData.forEach((value, key) => {
+        data[key] = value;
+      });
 
       fetch("/send-email", {
         method: "POST",
@@ -2135,5 +2136,13 @@
           console.error("Error:", error);
           alert("Error sending email.");
         });
-    });
+    }
+
+    document
+      .getElementById("insuranceForm")
+      .addEventListener("submit", handleFormSubmit);
+    document
+      .getElementById("footerNewsletterForm")
+      .addEventListener("submit", handleFormSubmit);
+  });
 </script>
