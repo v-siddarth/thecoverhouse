@@ -16,11 +16,17 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.post("/send-email", (req, res) => {
   const { name, email, insuranceType } = req.body;
+  const subject = insuranceType
+    ? "Insurance Quote Request"
+    : "Newsletter Subscription";
+  const text = insuranceType
+    ? `Name: ${name}\nEmail: ${email}\nInsurance Type: ${insuranceType}`
+    : `Email: ${email}\nSubscription to newsletter`;
 
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "onlyaddy68@@gmail.com",
+      user: "onlyaddy68@gmail.com",
       pass: "qkto yaph mtui ssag",
     },
   });
@@ -28,8 +34,8 @@ app.post("/send-email", (req, res) => {
   const mailOptions = {
     from: "onlyaddy68@gmail.com",
     to: "20sdeveloper4209@gmail.com",
-    subject: "Insurance Quote Request",
-    text: `Name: ${name}\nEmail: ${email}\nInsurance Type: ${insuranceType}`,
+    subject: subject,
+    text: text,
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
@@ -45,5 +51,5 @@ app.get("*", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}/`);
+  console.log(`Serverrr running on h http://localhost:${port}/`);
 });

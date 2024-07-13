@@ -135,7 +135,6 @@
         </div>
         <!-- /.preloader -->
     
-    
         <div class="page-wrapper">
             <header class="main-header clearfix">
                 <div class="main-header__top">
@@ -519,37 +518,3 @@
 </body>
 
 </html>
-<script>
-    document
-      .getElementById("insuranceForm")
-      .addEventListener("submit", function (event) {
-        event.preventDefault();
-  
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const insuranceType = document.getElementById("insuranceType").value;
-  
-        const data = {
-          name: name,
-          email: email,
-          insuranceType: insuranceType,
-        };
-  
-        fetch("/send-email", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            console.log("Success:", data);
-            alert("Email sent successfully!");
-          })
-          .catch((error) => {
-            console.error("Error:", error);
-            alert("Error sending email.");
-          });
-      });
-  </script>
