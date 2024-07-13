@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     fetch("/send-phone-call", {
-      // Adjusted endpoint for phone call
+      // Adjusted endpoint for phone
       method: "POST",
       headers: {
         "Content-Type": "application/json",
