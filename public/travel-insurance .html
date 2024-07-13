@@ -10,8 +10,15 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
     <link rel="manifest" href="assets/images/favicons/site.webmanifest">
-    <meta name="description" content="Insur HTML 5 Template ">
+   <meta
+      content="auto insurance, home insurance, life insurance, health insurance, business insurance, property insurance, insurance quotes, insurance coverage, insurance policies, insurance claims, insurance brokers, insurance companies, affordable insurance, comprehensive insurance, personalized insurance, insurance benefits, insurance options, risk management, deductible, premium payment, claim settlement, [Your City/Location] insurance"
+      name="keywords"
+    />
 
+    <meta
+      content="Explore comprehensive insurance solutions for auto, home, life, health, and business needs. Get quotes, compare policies, and find reliable coverage. Contact our expert brokers for personalized insurance advice."
+      name="description"
+    />
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -274,7 +281,7 @@
                                 </div>
                                 <ul class="insurance-details__age-list list-unstyled">
                                     <li>
-                                        <p>Minimum Age: <span>10 Years</span></p>
+                                        <p>Minimum Age: <span>21 Years</span></p>
                                     </li>
                                     <li>
                                         <p>Maximum Age: <span>65 Years</span></p>
@@ -351,8 +358,7 @@
                                         <h3 class="insurance-details__points-title">Fast & Easy <br> Process</h3>
                                     </div>
                                     <div class="insurance-details__points-right">
-                                        <p>There are many not of age of dirm available the simply free text available in
-                                            the market today you can use them majority.</p>
+                                        <p>Experience a fast and easy insurance process with our streamlined services. </p>
                                     </div>
                                 </li>
                                 <li>
@@ -363,8 +369,7 @@
                                         <h3 class="insurance-details__points-title">Quick Claim <br> Handle</h3>
                                     </div>
                                     <div class="insurance-details__points-right">
-                                        <p>There are many not of age of dirm available the simply free text available in
-                                            the market today you can use them majority.</p>
+                                        <p>Experience swift claim handling with our efficient process, ensuring fast resolution.</p>
                                     </div>
                                 </li>
                                 <li>
@@ -375,8 +380,7 @@
                                         <h3 class="insurance-details__points-title">Save Your <br> Money</h3>
                                     </div>
                                     <div class="insurance-details__points-right">
-                                        <p>There are many not of age of dirm available the simply free text available in
-                                            the market today you can use them majority.</p>
+                                        <p>Save money with our affordable insurance plans, offering great coverage at low rates.</p>
                                     </div>
                                 </li>
                             </ul>
@@ -501,13 +505,25 @@
                                 <h3 class="footer-widget__title">Newsletter</h3>
                                 <p class="footer-widget__newsletter-text">Subscribe our newsletter to get our <br>
                                     latest update & news.</p>
-                                <form class="footer-widget__newsletter-form">
-                                    <div class="footer-widget__newsletter-input-box">
-                                        <input type="email" placeholder="Email address" name="email">
-                                        <button type="submit" class="footer-widget__newsletter-btn"><i
-                                                class="far fa-paper-plane"></i></button>
-                                    </div>
-                                </form>
+                                <form
+                    id="footerNewsletterForm"
+                    class="footer-widget__newsletter-form"
+                  >
+                    <div class="footer-widget__newsletter-input-box">
+                      <input
+                        type="email"
+                        placeholder="Email address"
+                        name="email"
+                        id="footerEmail"
+                      />
+                      <button
+                        type="submit"
+                        class="footer-widget__newsletter-btn"
+                      >
+                        <i class="far fa-paper-plane"></i>
+                      </button>
+                    </div>
+                  </form>
                                 <div class="footer-widget__phone">
                                     <div class="footer-widget__phone-icon">
                                         <span class="icon-telephone"></span>
@@ -629,5 +645,43 @@
     <!-- template js -->
     <script src="assets/js/insur.js"></script>
 </body>
-
 </html>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      function handleFormSubmit(event) {
+        event.preventDefault();
+        const form = event.target;
+        const formData = new FormData(form);
+  
+        const data = {};
+        formData.forEach((value, key) => {
+          data[key] = value;
+        });
+  
+        fetch("/send-email", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log("Success:", data);
+            alert("Email sent successfully!");
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            alert("Error sending email.");
+          });
+      }
+  
+      document
+        .getElementById("insuranceForm")
+        .addEventListener("submit", handleFormSubmit);
+      document
+        .getElementById("footerNewsletterForm")
+        .addEventListener("submit", handleFormSubmit);
+    });
+  </script>
+  
