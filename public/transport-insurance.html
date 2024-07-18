@@ -89,7 +89,70 @@
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/insur.css" />
   </head>
+  <style>
+    .custom-alert {
+      display: none; /* Hidden by default */
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1000;
+      background-color: #fff;
+      border: 2px solid #000;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      max-width: 300px;
+      width: 80%;
+      text-align: center;
+    }
 
+    .custom-alert-content {
+      margin: 0;
+    }
+
+    .custom-alert-close {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .custom-alert-close:hover {
+      background-color: #45a049;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 10px;
+      background-color: #f3f3f3;
+      border: 1px solid #ddd;
+      margin-top: 10px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .progress-bar::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #4caf50;
+      animation: progress 5s linear forwards;
+    }
+
+    @keyframes progress {
+      from {
+        width: 100%;
+      }
+      to {
+        width: 0%;
+      }
+    }
+  </style>
   <body class="custom-cursor">
     <div class="custom-cursor__cursor"></div>
     <div class="custom-cursor__cursor-two"></div>
@@ -111,7 +174,10 @@
                       <span class="icon-pin"></span>
                     </i>
                     <div class="text">
-                      <p>Ganesh apartment,Office no 4, plot no 33 and 34, sector 35 kamothe</p>
+                      <p>
+                        Ganesh apartment,Office no 4, plot no 33 and 34,
+                        sector 35 kamothe
+                      </p>
                     </div>
                   </li>
                   <li>
@@ -232,370 +298,559 @@
       </section>
       <!--Page Header End-->
 
-
-
-        <!--Insurance Details Start-->
-        <section class="insurance-details">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-4 col-lg-5">
-                        <div class="insurance-details__left">
-                            <div class="insurance-details__services-box">
-                                <ul class="insurance-details__services-list list-unstyled">
-                                    <li><a href="car-insurance.html">Car insurance<span
-                                                class="icon-right-arrow1"></span></a></li>
-                                    <li><a href="life-insurance.html">Life insurance<span
-                                                class="icon-right-arrow1"></span></a></li>
-                                    <li><a href="home-insurance.html">Home insurance<span
-                                                class="icon-right-arrow1"></span></a></li>
-                                    <li><a href="health-insurance.html">Health insurance<span
-                                                class="icon-right-arrow1"></span></a></li>
-                                    <li><a href="business-insurance.html">Business insurance<span
-                                                class="icon-right-arrow1"></span></a></li>
-                                    <li><a href="cyber-insurance.html">Cyber insurance<span
-                                                class="icon-right-arrow1"></span></a></li>
-                                    <li><a href="marine-insurance.html">Marine insurance<span
-                                                class="icon-right-arrow1"></span></a></li>
-                                    <li><a href="transport-insurance.html">Transport insurance<span
-                                                class="icon-right-arrow1"></span></a></li>
-                                    <li><a href="./travel-insurance .html">Travel insurance<span
-                                                class="icon-right-arrow1"></span></a></li>
-                                    <li><a href="./Employee-contractor-insurance.html">Employee contractor insurance<span
-                                                class="icon-right-arrow1"></span></a></li>
-                                    <li><a href="./road-project-insurance.html">Road project insurance<span
-                                                class="icon-right-arrow1"></span></a></li>
-                                    <li><a href="./Mall-insurance.html">Mall insurance<span
-                                                class="icon-right-arrow1"></span></a></li>
-                                    <li><a href="./Hotel-insurance.html">Hotel insurance<span
-                                                class="icon-right-arrow1"></span></a></li>
-                                    <li><a href="./Factory-insurance.html">Factory insurance<span
-                                                class="icon-right-arrow1"></span></a></li>
-                                </ul>
-                            </div>
-                            <div class="insurance-details__download">
-                                <h3 class="insurance-details__download-title">Download resources</h3>
-                                <div class="row">
-                                    <div class="col-xl-6">
-                                        <div class="insurance-details__download-single">
-                                            <div class="insurance-details__download-icon">
-                                                <span class="insur-three-icon-pdf-file"></span>
-                                            </div>
-                                            <p class="insurance-details__download-mb">3.9KB</p>
-                                            <h3 class="insurance-details__download-title-2"><a href="#">Travel plan &
-                                                    <br> policy</a></h3>
-                                            <div class="insurance-details__download-btn-box">
-                                                <a href="#" class="insurance-details__download-btn thm-btn">Download</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-6">
-                                        <div class="insurance-details__download-single">
-                                            <div class="insurance-details__download-icon">
-                                                <span class="insur-three-icon-pdf-file"></span>
-                                            </div>
-                                            <p class="insurance-details__download-mb">3.9KB</p>
-                                            <h3 class="insurance-details__download-title-2"><a href="#">Travel plan &
-                                                    <br> policy</a></h3>
-                                            <div class="insurance-details__download-btn-box">
-                                                <a href="#" class="insurance-details__download-btn thm-btn">Download</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="insurance-details__need-help">
-                                <div class="insurance-details__need-help-bg"
-                                    style="background-image: url( )">
-                                </div>
-                                <div class="insurance-details__need-help-icon">
-                                    <span class="insur-three-icon-call"></span>
-                                </div>
-                                <h2 class="insurance-details__need-help-title">Talk to our
-                                    <br> insurance agent</h2>
-                                <div class="insurance-details__need-help-contact">
-                                    <a href="tel:+917738391446">+91 7738391446</a>
-                                    <p>Call to Our Experts</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-8 col-lg-7">
-                        <div class="insurance-details__right">
-                            <div class="insurance-details__img-1">
-                                <img src="assets/images/resources/insurance-details-img-8.jpg" alt="">
-                            </div>
-                            <div class="insurance-details__age-box">
-                                <div class="insurance-details__age-title-box">
-                                    <h3 class="insurance-details__age-title">Eligible ages:</h3>
-                                </div>
-                                <ul class="insurance-details__age-list list-unstyled">
-                                    <li>
-                                        <p>Minimum Age: <span>21 Years</span></p>
-                                    </li>
-                                    <li>
-                                        <p>Maximum Age: <span>65 Years</span></p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <p class="insurance-details__text-1">Neque porro est qui dolorem ipsum quia quaed inventore
-                                veritatis et quasi architecto beatae vitae dicta sunt explicabo. Aelltes port lacus quis
-                                enim var sed efficitur turpis gilla sed sit amet finibus eros. Lorem Ipsum is simply
-                                dummy text of the printing and typesetting industry.</p>
-                            <p class="insurance-details__text-2">Biophilia is the idea that humans possess an innate
-                                tendency to seek connections with nature. The term translates</p>
-                            <p class="insurance-details__text-3">When an unknown printer took a galley of type and
-                                scrambled it to make a type specimen book. It has survived not only five centuries, but
-                                also the leap into electronic typesetting, remaining essentially unchanged. Aelltes port
-                                lacus quis enim var sed efficitur turpis gilla sed sit amet finibus eros. Lorem Ipsum is
-                                simply dummy text of the printing and typesetting industry.</p>
-                            <div class="insurance-details__opportunities">
-                                <div class="insurance-details__opportunities-img">
-                                    <img src="assets/images/resources/insurance-details-opportunities-img.jpg"
-                                        alt="">
-                                    <div class="insurance-details__opportunities-hope">
-                                        <p>Hope for the Best,
-                                            <br> Prepare for the Worst</p>
-                                    </div>
-                                </div>
-                                <div class="insurance-details__opportunities-points-box">
-                                    <h3 class="insurance-details__opportunities-points-title">Main features</h3>
-                                    <p class="insurance-details__opportunities-points-text">There are many variations of
-                                        passages of available but the majority have suffered alteration in some form, by
-                                        injected hum randomised words which don't slightly.</p>
-                                    <ul class="insurance-details__opportunities-list list-unstyled">
-                                        <li>
-                                            <div class="icon">
-                                                <span class="fa fa-check"></span>
-                                            </div>
-                                            <div class="text">
-                                                <p>International Plans</p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="icon">
-                                                <span class="fa fa-check"></span>
-                                            </div>
-                                            <div class="text">
-                                                <p>Domestic Plans</p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="icon">
-                                                <span class="fa fa-check"></span>
-                                            </div>
-                                            <div class="text">
-                                                <p>Student Study Plans</p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="icon">
-                                                <span class="fa fa-check"></span>
-                                            </div>
-                                            <div class="text">
-                                                <p>Specialized Investigations</p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <ul class="insurance-details__points list-unstyled">
-                                <li>
-                                    <div class="insurance-details__points-left">
-                                        <div class="insurance-details__points-icon">
-                                            <span class="icon-easy-to-use"></span>
-                                        </div>
-                                        <h3 class="insurance-details__points-title">Fast & Easy <br> Process</h3>
-                                    </div>
-                                    <div class="insurance-details__points-right">
-                                        <p>Experience a fast and easy insurance process with our streamlined services. </p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="insurance-details__points-left">
-                                        <div class="insurance-details__points-icon">
-                                            <span class="icon-contract"></span>
-                                        </div>
-                                        <h3 class="insurance-details__points-title">Quick Claim <br> Handle</h3>
-                                    </div>
-                                    <div class="insurance-details__points-right">
-                                        <p>Experience swift claim handling with our efficient process, ensuring fast resolution.</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="insurance-details__points-left">
-                                        <div class="insurance-details__points-icon">
-                                            <span class="icon-fund"></span>
-                                        </div>
-                                        <h3 class="insurance-details__points-title">Save Your <br> Money</h3>
-                                    </div>
-                                    <div class="insurance-details__points-right">
-                                        <p>Save money with our affordable insurance plans, offering great coverage at low rates.</p>
-                                    </div>
-                                </li>
-                            </ul>
-                            <h3 class="insurance-details__title-1">Talk to our insurance experts</h3>
-                            <p class="insurance-details__text-4">Speak with insurance experts and ask questions before
-                                finalizing your plans or if you want help regarding our services. Our dedicated staff is
-                                more than happy to call and guide you.</p>
-                            <form class="insurance-details__email-box">
-                                <div class="insurance-details__email-input-box">
-                                    <input type="text" placeholder="Your phone number" name="phone">
-                                </div>
-                                <button type="submit" class="insurance-details__subscribe-btn thm-btn">Get a Phone
-                                    Call</button>
-                            </form>
-                        </div>
-                    </div>
+      <!--Insurance Details Start-->
+      <section class="insurance-details">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-4 col-lg-5">
+              <div class="insurance-details__left">
+                <div class="insurance-details__services-box">
+                  <ul class="insurance-details__services-list list-unstyled">
+                    <li>
+                      <a href="car-insurance.html"
+                        >Car insurance<span class="icon-right-arrow1"></span
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="life-insurance.html"
+                        >Life insurance<span class="icon-right-arrow1"></span
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="home-insurance.html"
+                        >Home insurance<span class="icon-right-arrow1"></span
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="health-insurance.html"
+                        >Health insurance<span class="icon-right-arrow1"></span
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="business-insurance.html"
+                        >Business insurance<span
+                          class="icon-right-arrow1"
+                        ></span
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="cyber-insurance.html"
+                        >Cyber insurance<span class="icon-right-arrow1"></span
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="marine-insurance.html"
+                        >Marine insurance<span class="icon-right-arrow1"></span
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="transport-insurance.html"
+                        >Transport insurance<span
+                          class="icon-right-arrow1"
+                        ></span
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="./travel-insurance .html"
+                        >Travel insurance<span class="icon-right-arrow1"></span
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="./Employee-contractor-insurance.html"
+                        >Employee contractor insurance<span
+                          class="icon-right-arrow1"
+                        ></span
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="./road-project-insurance.html"
+                        >Road project insurance<span
+                          class="icon-right-arrow1"
+                        ></span
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="./Mall-insurance.html"
+                        >Mall insurance<span class="icon-right-arrow1"></span
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="./Hotel-insurance.html"
+                        >Hotel insurance<span class="icon-right-arrow1"></span
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="./Factory-insurance.html"
+                        >Factory insurance<span class="icon-right-arrow1"></span
+                      ></a>
+                    </li>
+                  </ul>
                 </div>
+                <div class="insurance-details__download">
+                  <h3 class="insurance-details__download-title">
+                    Download resources
+                  </h3>
+                  <div class="row">
+                    <div class="col-xl-6">
+                      <div class="insurance-details__download-single">
+                        <div class="insurance-details__download-icon">
+                          <span class="insur-three-icon-pdf-file"></span>
+                        </div>
+                        <p class="insurance-details__download-mb">3.9KB</p>
+                        <h3 class="insurance-details__download-title-2">
+                          <a href="#"
+                            >Travel plan & <br />
+                            policy</a
+                          >
+                        </h3>
+                        <div class="insurance-details__download-btn-box">
+                          <a
+                            href="#"
+                            class="insurance-details__download-btn thm-btn"
+                            >Download</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-6">
+                      <div class="insurance-details__download-single">
+                        <div class="insurance-details__download-icon">
+                          <span class="insur-three-icon-pdf-file"></span>
+                        </div>
+                        <p class="insurance-details__download-mb">3.9KB</p>
+                        <h3 class="insurance-details__download-title-2">
+                          <a href="#"
+                            >Travel plan & <br />
+                            policy</a
+                          >
+                        </h3>
+                        <div class="insurance-details__download-btn-box">
+                          <a
+                            href="#"
+                            class="insurance-details__download-btn thm-btn"
+                            >Download</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="insurance-details__need-help">
+                  <div
+                    class="insurance-details__need-help-bg"
+                    style="background-image: url()"
+                  ></div>
+                  <div class="insurance-details__need-help-icon">
+                    <span class="insur-three-icon-call"></span>
+                  </div>
+                  <h2 class="insurance-details__need-help-title">
+                    Talk to our <br />
+                    insurance agent
+                  </h2>
+                  <div class="insurance-details__need-help-contact">
+                    <a href="tel:+917738391446">+91 7738391446</a>
+                    <p>Call to Our Experts</p>
+                  </div>
+                </div>
+              </div>
             </div>
-        </section>
-        <!--Insurance Details End-->
-
-        <!--Tracking Start-->
-         
-        <!--Tracking End-->
-
-        <!--Site Footer Start-->
-        <footer class="site-footer">
-          <div class="site-footer-bg" style="background-image: url(assets/images/backgrounds/site-footer-bg.png);">
-          </div>
-          <div class="container">
-              <div class="site-footer__top">
-                  <div class="row">
-                      <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
-                          <div class="footer-widget__column footer-widget__about">
-                              <div class="footer-widget__logo">
-                                  <a href="index.html"><img src="assets/images/resources/footer-logo.png" alt=""></a>
-                              </div>
-                              <div class="footer-widget__about-text-box">
-                                  <p class="footer-widget__about-text"> </p>
-                              </div>
-                              <div class="site-footer__social">
-                                  <a href="#"><i class="fab fa-twitter"></i></a>
-                                  <a href="#"><i class="fab fa-facebook"></i></a>
-                                  <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                                  <a href="#"><i class="fab fa-instagram"></i></a>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
-                          <div class="footer-widget__column footer-widget__contact clearfix">
-                              <h3 class="footer-widget__title">Contact</h3>
-                              <ul class="footer-widget__contact-list list-unstyled clearfix">
-                                  <li>
-                                      <div class="icon">
-                                          <span class="icon-email"></span>
-                                      </div>
-                                      <div class="text">
-                                          <p><a href="mailto:thecoverhouse@gmail.com">thecoverhouse@gmail.com</a></p>
-                                      </div>
-                                  </li>
-                                  <li>
-                                      <div class="icon">
-                                          <span class="icon-pin"></span>
-                                      </div>
-                                      <div class="text">
-                                          <p>Ganesh apartment,Office no 4, plot no 33 and 34, sector 35 kamothe</p>
-                                      </div>
-                                  </li>
-                              </ul>
-                              <div class="footer-widget__open-hour">
-                                  <h3 class="footer-widget__open-hour-title">Open Hours</h3>
-                                  <h3 class="footer-widget__open-hour-text">Always Available, 24/7 All Year Round</h3>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-                          <div class="footer-widget__column footer-widget__gallery clearfix">
-                              <h3 class="footer-widget__title">Instagram</h3>
-                              <ul class="footer-widget__gallery-list list-unstyled clearfix">
-                                  <li>
-                                      <div class="footer-widget__gallery-img">
-                                          <img src="assets/images/resources/footer-widget-gallery-img-1.jpg" alt="">
-                                          <a href="#"><span class="fa fa-link"></span></a>
-                                      </div>
-                                  </li>
-                                  <li>
-                                      <div class="footer-widget__gallery-img">
-                                          <img src="assets/images/resources/footer-widget-gallery-img-2.jpg" alt="">
-                                          <a href="#"><span class="fa fa-link"></span></a>
-                                      </div>
-                                  </li>
-                                  <li>
-                                      <div class="footer-widget__gallery-img">
-                                          <img src="assets/images/resources/footer-widget-gallery-img-3.jpg" alt="">
-                                          <a href="#"><span class="fa fa-link"></span></a>
-                                      </div>
-                                  </li>
-                                  <li>
-                                      <div class="footer-widget__gallery-img">
-                                          <img src="assets/images/resources/footer-widget-gallery-img-4.jpg" alt="">
-                                          <a href="#"><span class="fa fa-link"></span></a>
-                                      </div>
-                                  </li>
-                                  <li>
-                                      <div class="footer-widget__gallery-img">
-                                          <img src="assets/images/resources/footer-widget-gallery-img-5.jpg" alt="">
-                                          <a href="#"><span class="fa fa-link"></span></a>
-                                      </div>
-                                  </li>
-                                  <li>
-                                      <div class="footer-widget__gallery-img">
-                                          <img src="assets/images/resources/footer-widget-gallery-img-6.jpg" alt="">
-                                          <a href="#"><span class="fa fa-link"></span></a>
-                                      </div>
-                                  </li>
-                              </ul>
-                          </div>
-                      </div>
-                      <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                          <div class="footer-widget__column footer-widget__newsletter">
-                              <h3 class="footer-widget__title">Newsletter</h3>
-                              <p class="footer-widget__newsletter-text">Subscribe our newsletter to get our <br>
-                                  latest update & news.</p>
-                              <form
-                  id="footerNewsletterForm"
-                  class="footer-widget__newsletter-form"
-                >
-                  <div class="footer-widget__newsletter-input-box">
-                    <input
-                      type="email"
-                      placeholder="Email address"
-                      name="email"
-                      id="footerEmail"
+            <div class="col-xl-8 col-lg-7">
+              <div class="insurance-details__right">
+                <div class="insurance-details__img-1">
+                  <img
+                    src="assets/images/resources/insurance-details-img-8.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="insurance-details__age-box">
+                  <div class="insurance-details__age-title-box">
+                    <h3 class="insurance-details__age-title">Eligible ages:</h3>
+                  </div>
+                  <ul class="insurance-details__age-list list-unstyled">
+                    <li>
+                      <p>Minimum Age: <span>21 Years</span></p>
+                    </li>
+                    <li>
+                      <p>Maximum Age: <span>65 Years</span></p>
+                    </li>
+                  </ul>
+                </div>
+                <p class="insurance-details__text-1">
+                  Neque porro est qui dolorem ipsum quia quaed inventore
+                  veritatis et quasi architecto beatae vitae dicta sunt
+                  explicabo. Aelltes port lacus quis enim var sed efficitur
+                  turpis gilla sed sit amet finibus eros. Lorem Ipsum is simply
+                  dummy text of the printing and typesetting industry.
+                </p>
+                <p class="insurance-details__text-2">
+                  Biophilia is the idea that humans possess an innate tendency
+                  to seek connections with nature. The term translates
+                </p>
+                <p class="insurance-details__text-3">
+                  When an unknown printer took a galley of type and scrambled it
+                  to make a type specimen book. It has survived not only five
+                  centuries, but also the leap into electronic typesetting,
+                  remaining essentially unchanged. Aelltes port lacus quis enim
+                  var sed efficitur turpis gilla sed sit amet finibus eros.
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry.
+                </p>
+                <div class="insurance-details__opportunities">
+                  <div class="insurance-details__opportunities-img">
+                    <img
+                      src="assets/images/resources/insurance-details-opportunities-img.jpg"
+                      alt=""
                     />
-                    <button
-                      type="submit"
-                      class="footer-widget__newsletter-btn"
+                    <div class="insurance-details__opportunities-hope">
+                      <p>
+                        Hope for the Best, <br />
+                        Prepare for the Worst
+                      </p>
+                    </div>
+                  </div>
+                  <div class="insurance-details__opportunities-points-box">
+                    <h3 class="insurance-details__opportunities-points-title">
+                      Main features
+                    </h3>
+                    <p class="insurance-details__opportunities-points-text">
+                      There are many variations of passages of available but the
+                      majority have suffered alteration in some form, by
+                      injected hum randomised words which don't slightly.
+                    </p>
+                    <ul
+                      class="insurance-details__opportunities-list list-unstyled"
                     >
-                      <i class="far fa-paper-plane"></i>
-                    </button>
+                      <li>
+                        <div class="icon">
+                          <span class="fa fa-check"></span>
+                        </div>
+                        <div class="text">
+                          <p>International Plans</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="icon">
+                          <span class="fa fa-check"></span>
+                        </div>
+                        <div class="text">
+                          <p>Domestic Plans</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="icon">
+                          <span class="fa fa-check"></span>
+                        </div>
+                        <div class="text">
+                          <p>Student Study Plans</p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="icon">
+                          <span class="fa fa-check"></span>
+                        </div>
+                        <div class="text">
+                          <p>Specialized Investigations</p>
+                        </div>
+                      </li>
+                    </ul>
                   </div>
+                </div>
+                <ul class="insurance-details__points list-unstyled">
+                  <li>
+                    <div class="insurance-details__points-left">
+                      <div class="insurance-details__points-icon">
+                        <span class="icon-easy-to-use"></span>
+                      </div>
+                      <h3 class="insurance-details__points-title">
+                        Fast & Easy <br />
+                        Process
+                      </h3>
+                    </div>
+                    <div class="insurance-details__points-right">
+                      <p>
+                        Experience a fast and easy insurance process with our
+                        streamlined services.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="insurance-details__points-left">
+                      <div class="insurance-details__points-icon">
+                        <span class="icon-contract"></span>
+                      </div>
+                      <h3 class="insurance-details__points-title">
+                        Quick Claim <br />
+                        Handle
+                      </h3>
+                    </div>
+                    <div class="insurance-details__points-right">
+                      <p>
+                        Experience swift claim handling with our efficient
+                        process, ensuring fast resolution.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="insurance-details__points-left">
+                      <div class="insurance-details__points-icon">
+                        <span class="icon-fund"></span>
+                      </div>
+                      <h3 class="insurance-details__points-title">
+                        Save Your <br />
+                        Money
+                      </h3>
+                    </div>
+                    <div class="insurance-details__points-right">
+                      <p>
+                        Save money with our affordable insurance plans, offering
+                        great coverage at low rates.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+                <h3 class="insurance-details__title-1">
+                  Talk to our insurance experts
+                </h3>
+                <p class="insurance-details__text-4">
+                  Speak with insurance experts and ask questions before
+                  finalizing your plans or if you want help regarding our
+                  services. Our dedicated staff is more than happy to call and
+                  guide you.
+                </p>
+                <form class="insurance-details__email-box">
+                  <div class="insurance-details__email-input-box">
+                    <input
+                      type="text"
+                      placeholder="Your phone number"
+                      name="phone"
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    class="insurance-details__subscribe-btn thm-btn"
+                  >
+                    Get a Phone Call
+                  </button>
                 </form>
-                              <div class="footer-widget__phone">
-                                  <div class="footer-widget__phone-icon">
-                                      <span class="icon-telephone"></span>
-                                  </div>
-                                  <div class="footer-widget__phone-text">
-                                      <a href="tel:7738391446">+91 7738391446</a>
-                                      <p>Call to Our Experts</p>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
               </div>
-              <div class="site-footer__bottom">
-                  <div class="row">
-                      <div class="col-xl-12">
-                          <div class="site-footer__bottom-inner">
-                              <p class="site-footer__bottom-text">© All Copyright 2023 by <a href="#">thecoverhouse.in</a>
-                              </p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+            </div>
           </div>
+        </div>
+        <div id="custom-alert" class="custom-alert">
+          <div class="custom-alert-content">
+            <span id="custom-alert-message"></span>
+            <div id="progress-bar" class="progress-bar"></div>
+            <button id="custom-alert-close" class="custom-alert-close">
+              OK
+            </button>
+          </div>
+        </div>
+      </section>
+      <!--Insurance Details End-->
+
+      <!--Tracking Start-->
+
+      <!--Tracking End-->
+
+      <!--Site Footer Start-->
+      <footer class="site-footer">
+        <div
+          class="site-footer-bg"
+          style="
+            background-image: url(assets/images/backgrounds/site-footer-bg.png);
+          "
+        ></div>
+        <div class="container">
+          <div class="site-footer__top">
+            <div class="row">
+              <div
+                class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp"
+                data-wow-delay="100ms"
+              >
+                <div class="footer-widget__column footer-widget__about">
+                  <div class="footer-widget__logo">
+                    <a href="index.html"
+                      ><img
+                        src="assets/images/resources/footer-logo.png"
+                        alt=""
+                    /></a>
+                  </div>
+                  <div class="footer-widget__about-text-box">
+                    <p class="footer-widget__about-text"></p>
+                  </div>
+                  <div class="site-footer__social">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp"
+                data-wow-delay="200ms"
+              >
+                <div
+                  class="footer-widget__column footer-widget__contact clearfix"
+                >
+                  <h3 class="footer-widget__title">Contact</h3>
+                  <ul
+                    class="footer-widget__contact-list list-unstyled clearfix"
+                  >
+                    <li>
+                      <div class="icon">
+                        <span class="icon-email"></span>
+                      </div>
+                      <div class="text">
+                        <p>
+                          <a href="mailto:thecoverhouse@gmail.com"
+                            >thecoverhouse@gmail.com</a
+                          >
+                        </p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <span class="icon-pin"></span>
+                      </div>
+                      <div class="text">
+                        <p>
+                          Ganesh apartment,Office no 4, plot no 33 and 34,
+                          sector 35 kamothe
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="footer-widget__open-hour">
+                    <h3 class="footer-widget__open-hour-title">Open Hours</h3>
+                    <h3 class="footer-widget__open-hour-text">
+                      Always Available, 24/7 All Year Round
+                    </h3>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp"
+                data-wow-delay="300ms"
+              >
+                <div
+                  class="footer-widget__column footer-widget__gallery clearfix"
+                >
+                  <h3 class="footer-widget__title">Instagram</h3>
+                  <ul
+                    class="footer-widget__gallery-list list-unstyled clearfix"
+                  >
+                    <li>
+                      <div class="footer-widget__gallery-img">
+                        <img
+                          src="assets/images/resources/footer-widget-gallery-img-1.jpg"
+                          alt=""
+                        />
+                        <a href="#"><span class="fa fa-link"></span></a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="footer-widget__gallery-img">
+                        <img
+                          src="assets/images/resources/footer-widget-gallery-img-2.jpg"
+                          alt=""
+                        />
+                        <a href="#"><span class="fa fa-link"></span></a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="footer-widget__gallery-img">
+                        <img
+                          src="assets/images/resources/footer-widget-gallery-img-3.jpg"
+                          alt=""
+                        />
+                        <a href="#"><span class="fa fa-link"></span></a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="footer-widget__gallery-img">
+                        <img
+                          src="assets/images/resources/footer-widget-gallery-img-4.jpg"
+                          alt=""
+                        />
+                        <a href="#"><span class="fa fa-link"></span></a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="footer-widget__gallery-img">
+                        <img
+                          src="assets/images/resources/footer-widget-gallery-img-5.jpg"
+                          alt=""
+                        />
+                        <a href="#"><span class="fa fa-link"></span></a>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="footer-widget__gallery-img">
+                        <img
+                          src="assets/images/resources/footer-widget-gallery-img-6.jpg"
+                          alt=""
+                        />
+                        <a href="#"><span class="fa fa-link"></span></a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div
+                class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp"
+                data-wow-delay="400ms"
+              >
+                <div class="footer-widget__column footer-widget__newsletter">
+                  <h3 class="footer-widget__title">Newsletter</h3>
+                  <p class="footer-widget__newsletter-text">
+                    Subscribe our newsletter to get our <br />
+                    latest update & news.
+                  </p>
+                  <form
+                    id="footerNewsletterForm"
+                    class="footer-widget__newsletter-form"
+                  >
+                    <div class="footer-widget__newsletter-input-box">
+                      <input
+                        type="email"
+                        placeholder="Email address"
+                        name="email"
+                        id="footerEmail"
+                      />
+                      <button
+                        type="submit"
+                        class="footer-widget__newsletter-btn"
+                      >
+                        <i class="far fa-paper-plane"></i>
+                      </button>
+                    </div>
+                  </form>
+                  <div class="footer-widget__phone">
+                    <div class="footer-widget__phone-icon">
+                      <span class="icon-telephone"></span>
+                    </div>
+                    <div class="footer-widget__phone-text">
+                      <a href="tel:7738391446">+91 7738391446</a>
+                      <p>Call to Our Experts</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="site-footer__bottom">
+            <div class="row">
+              <div class="col-xl-12">
+                <div class="site-footer__bottom-inner">
+                  <p class="site-footer__bottom-text">
+                    © All Copyright 2023 by <a href="#">thecoverhouse.in</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </footer>
       <!--Site Footer End-->
     </div>
@@ -696,45 +951,43 @@
 
     <!-- template js -->
     <script src="assets/js/insur.js"></script>
-</body>
-
+  </body>
 </html>
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      function handleFormSubmit(event) {
-        event.preventDefault();
-        const form = event.target;
-        const formData = new FormData(form);
-  
-        const data = {};
-        formData.forEach((value, key) => {
-          data[key] = value;
-        });
-  
-        fetch("/send-email", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
+  document.addEventListener("DOMContentLoaded", function () {
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      const formData = new FormData(form);
+
+      const data = {};
+      formData.forEach((value, key) => {
+        data[key] = value;
+      });
+
+      fetch("/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Success:", data);
+          alert("Email sent successfully!");
         })
-          .then((response) => response.json())
-          .then((data) => {
-            console.log("Success:", data);
-            alert("Email sent successfully!");
-          })
-          .catch((error) => {
-            console.error("Error:", error);
-            alert("Error sending email.");
-          });
-      }
-  
-      document
-        .getElementById("insuranceForm")
-        .addEventListener("submit", handleFormSubmit);
-      document
-        .getElementById("footerNewsletterForm")
-        .addEventListener("submit", handleFormSubmit);
-    });
-  </script>
-  
+        .catch((error) => {
+          console.error("Error:", error);
+          alert("Error sending email.");
+        });
+    }
+
+    document
+      .getElementById("insuranceForm")
+      .addEventListener("submit", handleFormSubmit);
+    document
+      .getElementById("footerNewsletterForm")
+      .addEventListener("submit", handleFormSubmit);
+  });
+</script>
