@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     fetch("/send-phone-call", {
-      // Adjusted endpoint for phone
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -20,17 +19,29 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((response) => response.json())
       .then((data) => {
         console.log("Success:", data);
-        alert("Phone call request submitted successfully!");
-        // Optionally reset the form after successful submission
+        showAlert("Phone call request submitted successfully!");
         form.reset();
       })
       .catch((error) => {
         console.error("Error:", error);
-        alert("Error submitting phone call request.");
+        showAlert("Error submitting phone call request.");
       });
   }
 
+  function showAlert(message) {
+    const alertBox = document.getElementById("custom-alert");
+    const alertMessage = document.getElementById("custom-alert-message");
+    const alertClose = document.getElementById("custom-alert-close");
+
+    alertMessage.textContent = message;
+    alertBox.style.display = "block";
+
+    alertClose.onclick = function () {
+      alertBox.style.display = "none";
+    };
+  }
   // Add event listener to all forms with class 'insurance-details__email-box'
+
   const phoneCallForms = document.querySelectorAll(
     ".insurance-details__email-box"
   );
