@@ -146,7 +146,9 @@
       background-color: #4caf50;
       animation: progress 5s linear forwards;
     }
-
+    #error-message {
+      color: red;
+    }
     @keyframes progress {
       from {
         width: 100%;
@@ -620,12 +622,14 @@
                   services. Our dedicated staff is more than happy to call and
                   guide you.
                 </p>
-                <form class="insurance-details__email-box">
+                <form class="insurance-details__email-box" id="phoneForm">
                   <div class="insurance-details__email-input-box">
                     <input
                       type="text"
                       placeholder="Your phone number"
                       name="phone"
+                      id="phoneInput"
+                      maxlength="10"
                     />
                   </div>
                   <button
@@ -635,6 +639,9 @@
                     Get a Phone Call
                   </button>
                 </form>
+                <small id="error-message" style="color: red; display: none"
+                  >Please enter a valid 10-digit phone number.</small
+                >
               </div>
             </div>
           </div>
