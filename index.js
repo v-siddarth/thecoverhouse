@@ -45,6 +45,33 @@ app.post("/send-email", (req, res) => {
     res.send({ success: true, info });
   });
 });
+app.post("/contact-us", (req, res) => {
+  const { name, email, phone, subject } = req.body;
+
+  const text = `name ${name} email :\n${email} subject:\n${subject} phone is: ${phone}`;
+
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: "onlyaddy68@gmail.com",
+      pass: "qkto yaph mtui ssag",
+    },
+  });
+
+  const mailOptions = {
+    from: "onlyaddy68@gmail.com",
+    to: "20sdeveloper4209@gmail.com",
+    subject: subject,
+    text: text,
+  };
+
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      return res.status(500).send({ error: error.toString() });
+    }
+    res.send({ success: true, info });
+  });
+});
 app.post("/send-phone-call", (req, res) => {
   const { phone } = req.body;
   const subject = "Phone Call Request";
