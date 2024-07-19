@@ -48,7 +48,18 @@ app.post("/send-email", (req, res) => {
 app.post("/contact-us", (req, res) => {
   const { name, email, phone, subject } = req.body;
 
-  const text = `name ${name} email :\n${email} subject:\n${subject} phone is: ${phone}`;
+  // Validate phone number
+  const phoneRegex = /^\d{10}$/;
+  if (!phoneRegex.test(phone)) {
+    return res
+      .status(400)
+      .type("html")
+      .send(
+        '<span style="color: red;">Please enter a valid phone number</span>'
+      );
+  }
+
+  const text = `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nPhone: ${phone}`;
 
   const transporter = nodemailer.createTransport({
     service: "gmail",
@@ -72,6 +83,7 @@ app.post("/contact-us", (req, res) => {
     res.send({ success: true, info });
   });
 });
+
 app.post("/send-phone-call", (req, res) => {
   const { phone } = req.body;
   const subject = "Phone Call Request";
