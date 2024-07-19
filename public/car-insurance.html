@@ -622,13 +622,13 @@
                   services. Our dedicated staff is more than happy to call and
                   guide you.
                 </p>
-                <form class="insurance-details__email-box" id="phoneForm">
+                <form class="insurance-details__email-box">
                   <div class="insurance-details__email-input-box">
                     <input
                       type="text"
                       placeholder="Your phone number"
                       name="phone"
-                      id="phoneInput"
+                      id="phone"
                       maxlength="10"
                     />
                   </div>
@@ -836,6 +836,18 @@
                       </button>
                     </div>
                   </form>
+
+                  <div id="custom-alert" class="custom-alert">
+                    <span
+                      id="custom-alert-message"
+                      class="custom-alert-content"
+                    ></span>
+                    <div class="progress-bar"></div>
+                    <button id="custom-alert-close" class="custom-alert-close">
+                      Close
+                    </button>
+                  </div>
+
                   <div class="footer-widget__phone">
                     <div class="footer-widget__phone-icon">
                       <span class="icon-telephone"></span>
@@ -932,6 +944,7 @@
       ><i class="fa fa-angle-up"></i
     ></a>
     <script src="./phone_handler.js"></script>
+    <script src="./email_handler.js"></script>
 
     <script src="assets/vendors/jquery/jquery-3.6.0.min.js"></script>
     <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
