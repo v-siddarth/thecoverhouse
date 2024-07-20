@@ -424,8 +424,8 @@
                     <div class="contact-page__form">
                       <form
                         action=""
-                        class="contact-form-validated"
-                        id="insuranceForm"
+                        class="comment-one__form contact-form-validated"
+                        id="contactForm"
                         novalidate="novalidate"
                       >
                         <div class="row">
@@ -453,8 +453,6 @@
                                 type="text"
                                 placeholder="Phone number"
                                 name="phone"
-                                maxlength="10"
-                                minlength="10"
                               />
                             </div>
                           </div>
@@ -844,43 +842,52 @@
         <script src="assets/js/insur.js"></script>
       </body>
     </html>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        function handleFormSubmit(event) {
+          event.preventDefault();
+          const form = event.target;
+          const formData = new FormData(form);
+          const data = {};
+          formData.forEach((value, key) => {
+            data[key] = value;
+          });
+
+          let url = "";
+          let headers = {
+            "Content-Type": "application/json",
+          };
+
+          // Determine which form is being submitted
+          if (form.id === "contactForm") {
+            url = "/contact-us";
+          } else if (form.id === "footerNewsletterForm") {
+            url = "/newsletter";
+          }
+
+          fetch(url, {
+            method: "POST",
+            headers: headers,
+            body: JSON.stringify(data),
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              console.log("Success:", data);
+              alert("Message sent successfully!");
+            })
+            .catch((error) => {
+              console.error("Error:", error.message);
+              alert("Error sending message.");
+            });
+        }
+
+        document
+          .getElementById("contactForm")
+          .addEventListener("submit", handleFormSubmit);
+        document
+          .getElementById("footerNewsletterForm")
+          .addEventListener("submit", handleFormSubmit);
+      });
+    </script>
   </body>
 </html>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    function handleFormSubmit(event) {
-      event.preventDefault();
-      const form = event.target;
-      const formData = new FormData(form);
-
-      const data = {};
-      formData.forEach((value, key) => {
-        data[key] = value;
-      });
-
-      fetch("contact-us", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          console.log("Success:", data);
-          alert("Email sent successfully!");
-        })
-        .catch((error) => {
-          console.error("Error:", error);
-          alert("Error sending email.");
-        });
-    }
-
-    document
-      .getElementById("insuranceForm")
-      .addEventListener("submit", handleFormSubmit);
-    document
-      .getElementById("footerNewsletterForm")
-      .addEventListener("submit", handleFormSubmit);
-  });
-</script>

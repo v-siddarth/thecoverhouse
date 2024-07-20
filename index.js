@@ -83,6 +83,37 @@ app.post("/contact-us", (req, res) => {
     res.send({ success: true, info });
   });
 });
+app.post("/newsletter", (req, res) => {
+  const { email } = req.body;
+
+  if (!email || !email.includes("@")) {
+    return res.status(400).send("Please enter a valid email address");
+  }
+
+  const text = `Email: ${email}`;
+
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: "onlyaddy68@gmail.com",
+      pass: "qkto yaph mtui ssag",
+    },
+  });
+
+  const mailOptions = {
+    from: "onlyaddy68@gmail.com",
+    to: "20sdeveloper4209@gmail.com",
+    subject: "New newsletter subscription",
+    text: text,
+  };
+
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      return res.status(500).send({ error: error.toString() });
+    }
+    res.send({ success: true, info });
+  });
+});
 
 app.post("/send-phone-call", (req, res) => {
   const { phone } = req.body;
