@@ -8,21 +8,21 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="assets/images/favicons/apple-touch-icon.png"
+      href="../assets/images/favicons/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="assets/images/favicons/favicon-32x32.png"
+      href="../assets/images/favicons/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="assets/images/favicons/favicon-16x16.png"
+      href="../assets/images/favicons/favicon-16x16.png"
     />
-    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
+    <link rel="manifest" href="../assets/images/favicons/site.webmanifest" />
     <meta
       content="auto insurance, home insurance, life insurance, health insurance, business insurance, property insurance, insurance quotes, insurance coverage, insurance policies, insurance claims, insurance brokers, insurance companies, affordable insurance, comprehensive insurance, personalized insurance, insurance benefits, insurance options, risk management, deductible, premium payment, claim settlement, [Your City/Location] insurance"
       name="keywords"
@@ -44,53 +44,53 @@
 
     <link
       rel="stylesheet"
-      href="assets/vendors/bootstrap/css/bootstrap.min.css"
+      href="../assets/vendors/bootstrap/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
-    <link rel="stylesheet" href="assets/vendors/animate/custom-animate.css" />
-    <link rel="stylesheet" href="assets/vendors/fontawesome/css/all.min.css" />
-    <link rel="stylesheet" href="assets/vendors/jarallax/jarallax.css" />
+    <link rel="stylesheet" href="../assets/vendors/animate/animate.min.css" />
+    <link rel="stylesheet" href="../assets/vendors/animate/custom-animate.css" />
+    <link rel="stylesheet" href="../assets/vendors/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="../assets/vendors/jarallax/jarallax.css" />
     <link
       rel="stylesheet"
-      href="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css"
-    />
-    <link
-      rel="stylesheet"
-      href="assets/vendors/nouislider/nouislider.min.css"
+      href="../assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css"
     />
     <link
       rel="stylesheet"
-      href="assets/vendors/nouislider/nouislider.pips.css"
-    />
-    <link rel="stylesheet" href="assets/vendors/odometer/odometer.min.css" />
-    <link rel="stylesheet" href="assets/vendors/swiper/swiper.min.css" />
-    <link rel="stylesheet" href="assets/vendors/insur-icons/style.css" />
-    <link rel="stylesheet" href="assets/vendors/insur-two-icon/style.css" />
-    <link
-      rel="stylesheet"
-      href="assets/vendors/tiny-slider/tiny-slider.min.css"
-    />
-    <link rel="stylesheet" href="assets/vendors/reey-font/stylesheet.css" />
-    <link
-      rel="stylesheet"
-      href="assets/vendors/owl-carousel/owl.carousel.min.css"
+      href="../assets/vendors/nouislider/nouislider.min.css"
     />
     <link
       rel="stylesheet"
-      href="assets/vendors/owl-carousel/owl.theme.default.min.css"
+      href="../assets/vendors/nouislider/nouislider.pips.css"
     />
-    <link rel="stylesheet" href="assets/vendors/bxslider/jquery.bxslider.css" />
+    <link rel="stylesheet" href="../assets/vendors/odometer/odometer.min.css" />
+    <link rel="stylesheet" href="../assets/vendors/swiper/swiper.min.css" />
+    <link rel="stylesheet" href="../assets/vendors/insur-icons/style.css" />
+    <link rel="stylesheet" href="../assets/vendors/insur-two-icon/style.css" />
     <link
       rel="stylesheet"
-      href="assets/vendors/bootstrap-select/css/bootstrap-select.min.css"
+      href="../assets/vendors/tiny-slider/tiny-slider.min.css"
     />
-    <link rel="stylesheet" href="assets/vendors/vegas/vegas.min.css" />
-    <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css" />
-    <link rel="stylesheet" href="assets/vendors/timepicker/timePicker.css" />
-    <link rel="stylesheet" href="assets/vendors/insur-three-icon/style.css" />
+    <link rel="stylesheet" href="../assets/vendors/reey-font/stylesheet.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/vendors/owl-carousel/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/vendors/owl-carousel/owl.theme.default.min.css"
+    />
+    <link rel="stylesheet" href="../assets/vendors/bxslider/jquery.bxslider.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/vendors/bootstrap-select/css/bootstrap-select.min.css"
+    />
+    <link rel="stylesheet" href="../assets/vendors/vegas/vegas.min.css" />
+    <link rel="stylesheet" href="../assets/vendors/jquery-ui/jquery-ui.css" />
+    <link rel="stylesheet" href="../assets/vendors/timepicker/timePicker.css" />
+    <link rel="stylesheet" href="../assets/vendors/insur-three-icon/style.css" />
 
     <!-- template styles -->
-    <link rel="stylesheet" href="assets/css/insur.css" />
+    <link rel="stylesheet" href="../assets/css/insur.css" />
   </head>
   <style>
     .custom-alert {
@@ -146,7 +146,9 @@
       background-color: #4caf50;
       animation: progress 5s linear forwards;
     }
-
+    #error-message {
+      color: red;
+    }
     @keyframes progress {
       from {
         width: 100%;
@@ -156,7 +158,6 @@
       }
     }
   </style>
-
   <body class="custom-cursor">
     <div class="custom-cursor__cursor"></div>
     <div class="custom-cursor__cursor-two"></div>
@@ -199,6 +200,7 @@
                 </ul>
               </div>
               <div class="main-header__top-right">
+                <div class="main-header__top-menu-box"></div>
                 <div class="main-header__top-social-box">
                   <div class="main-header__top-social">
                     <a href="#"><i class="fab fa-twitter"></i></a>
@@ -218,7 +220,7 @@
                 <div class="main-menu__left">
                   <div class="main-menu__logo">
                     <a href="index.html"
-                      ><img src="assets/images/resources/logo-1.png" alt=""
+                      ><img src="../assets/images/resources/logo-1.png" alt=""
                     /></a>
                   </div>
                   <div class="main-menu__main-menu-box">
@@ -228,19 +230,19 @@
                       ></a>
                       <ul class="main-menu__list one-page-scroll-menu">
                         <li class="dropdown current scrollToLink">
-                          <a href="./index.html">Home </a>
+                          <a href="../index.html">Home </a>
                         </li>
                         <li class="scrollToLink">
-                          <a href="./index.html">About</a>
+                          <a href="../index.html">About</a>
                         </li>
                         <li class="scrollToLink">
-                          <a href="./car-insurance.html">Insurance </a>
+                          <a href="../index.html">Insurance </a>
                         </li>
                         <li class="scrollToLink">
-                          <a href="./index.html">Team</a>
+                           <a href="../team.html">Team</a>
                         </li>
                         <li class="scrollToLink">
-                          <a href="./index.html">News </a>
+                          <a href="../index.html">News </a>
                         </li>
                       </ul>
                     </div>
@@ -271,6 +273,7 @@
           </div>
         </nav>
       </header>
+
       <div class="stricky-header stricked-menu main-menu">
         <div class="sticky-header__content"></div>
         <!-- /.sticky-header__content -->
@@ -282,11 +285,11 @@
         <div
           class="page-header-bg"
           style="
-            background-image: url(assets/images/backgrounds/page-header-bg.jpg);
+            background-image: url(../assets/images/backgrounds/page-header-bg.jpg);
           "
         ></div>
         <div class="page-header-shape-1">
-          <img src="assets/images/shapes/page-header-shape-1.png" alt="" />
+          <img src="../assets/images/shapes/page-header-shape-1.png" alt="" />
         </div>
         <div class="container">
           <div class="page-header__inner">
@@ -295,7 +298,7 @@
               <li><span>/</span></li>
               <li>Insurance</li>
             </ul>
-            <h2>Employee contractor insurance</h2>
+            <h2>Car insurance</h2>
           </div>
         </div>
       </section>
@@ -402,7 +405,7 @@
                         <p class="insurance-details__download-mb">3.9KB</p>
                         <h3 class="insurance-details__download-title-2">
                           <a href="#"
-                            >Travel plan & <br />
+                            >Car Insurance & <br />
                             policy</a
                           >
                         </h3>
@@ -420,10 +423,10 @@
                         <div class="insurance-details__download-icon">
                           <span class="insur-three-icon-pdf-file"></span>
                         </div>
-                        <p class="insurance-details__download-mb">3.9KB</p>
+                        <p class="insurance-details__download-mb">2.5KB</p>
                         <h3 class="insurance-details__download-title-2">
                           <a href="#"
-                            >Travel plan & <br />
+                            >Car Inurance & <br />
                             policy</a
                           >
                         </h3>
@@ -439,10 +442,7 @@
                   </div>
                 </div>
                 <div class="insurance-details__need-help">
-                  <div
-                    class="insurance-details__need-help-bg"
-                    style="background-image: url()"
-                  ></div>
+                  <div class="insurance-details__need-help-bg"></div>
                   <div class="insurance-details__need-help-icon">
                     <span class="insur-three-icon-call"></span>
                   </div>
@@ -451,7 +451,7 @@
                     insurance agent
                   </h2>
                   <div class="insurance-details__need-help-contact">
-                    <a href="tel:+917738391446">+91 7738391446</a>
+                    <a href="tel:+917738391446">+92 7738391446</a>
                     <p>Call to Our Experts</p>
                   </div>
                 </div>
@@ -461,7 +461,7 @@
               <div class="insurance-details__right">
                 <div class="insurance-details__img-1">
                   <img
-                    src="assets/images/resources/insurance-details-img-10.jpg"
+                    src="../assets/images/resources/insurance-details-img-1.jpg"
                     alt=""
                   />
                 </div>
@@ -479,19 +479,32 @@
                   </ul>
                 </div>
                 <p class="insurance-details__text-1">
-                  Employee contractor insurance provides essential coverage for contractors and freelancers working on a contractual basis. It ensures protection against various risks associated with their professional activities.
+                  A comprehensive car insurance is a complete package for your
+                  car. Any damages caused due to theft, accident, fire are
+                  covered. Along with this, you’re also covered against
+                  third-party insurance i.e. damages caused by your vehicle to
+                  another party.
                 </p>
                 <p class="insurance-details__text-2">
-                  Cover: Employee Contractor Insurance<br>
-                  (Section 1 - Professional Liability Insurance & Section 2 - General Liability Insurance & Section 3 - Personal Accident Insurance & Section 4 - Health Insurance & Section 5 - Income Protection Insurance)
+                  Cover: Comprehensive Insurance<br />
+                  (Section 1 - Loss or Damage & Section 2 - Third Party
+                  Liability)
                 </p>
                 <p class="insurance-details__text-3">
-                  This insurance is vital for safeguarding contractors against potential liabilities and providing financial support in case of accidents or health issues related to their work.
+                  This is the most basic and mandatory form of motor insurance
+                  as per UAE law. The policy is usually cheaper compared to a
+                  comprehensive policy and covers damages caused to another
+                  party by your car. Third party insurance cover will not pay
+                  for any damages to your own car.<br />Whilst in transit
+                  (including the process of loading and unloading incidental to
+                  such transit) by road, rail, inland waterway, lift or
+                  elevator, relating to the said transportation.<br />Fire,
+                  external explosion, self ignition, lightning or thunderbolt.
                 </p>
                 <div class="insurance-details__opportunities">
                   <div class="insurance-details__opportunities-img">
                     <img
-                      src="assets/images/resources/insurance-details-opportunities-img.jpg"
+                      src="../assets/images/resources/insurance-details-opportunities-img.jpg"
                       alt=""
                     />
                     <div class="insurance-details__opportunities-hope">
@@ -506,7 +519,8 @@
                       Main features
                     </h3>
                     <p class="insurance-details__opportunities-points-text">
-                      Employee Contractor Insurance includes several types of coverage:
+                      Comprehensive Insurance cover against Loss, Damage to your
+                      car, its accessories and ​spare parts due to:
                     </p>
                     <ul
                       class="insurance-details__opportunities-list list-unstyled"
@@ -516,7 +530,7 @@
                           <span class="fa fa-check"></span>
                         </div>
                         <div class="text">
-                          <p>Professional Liability Insurance.</p>
+                          <p>Accident, Accidental collision.</p>
                         </div>
                       </li>
                       <li>
@@ -524,7 +538,7 @@
                           <span class="fa fa-check"></span>
                         </div>
                         <div class="text">
-                          <p>General Liability Insurance.</p>
+                          <p>Burglary or theft</p>
                         </div>
                       </li>
                       <li>
@@ -532,7 +546,7 @@
                           <span class="fa fa-check"></span>
                         </div>
                         <div class="text">
-                          <p>Personal Accident Insurance.</p>
+                          <p>Malicious act of any third party</p>
                         </div>
                       </li>
                       <li>
@@ -540,7 +554,7 @@
                           <span class="fa fa-check"></span>
                         </div>
                         <div class="text">
-                          <p>Income Protection Insurance.</p>
+                          <p>Fire, external explosion.</p>
                         </div>
                       </li>
                     </ul>
@@ -614,6 +628,8 @@
                       type="text"
                       placeholder="Your phone number"
                       name="phone"
+                      id="phone"
+                      maxlength="10"
                     />
                   </div>
                   <button
@@ -623,6 +639,9 @@
                     Get a Phone Call
                   </button>
                 </form>
+                <small id="error-message" style="color: red; display: none"
+                  >Please enter a valid 10-digit phone number.</small
+                >
               </div>
             </div>
           </div>
@@ -648,7 +667,7 @@
         <div
           class="site-footer-bg"
           style="
-            background-image: url(assets/images/backgrounds/site-footer-bg.png);
+            background-image: url(../assets/images/backgrounds/site-footer-bg.png);
           "
         ></div>
         <div class="container">
@@ -662,7 +681,7 @@
                   <div class="footer-widget__logo">
                     <a href="index.html"
                       ><img
-                        src="assets/images/resources/footer-logo.png"
+                        src="../assets/images/resources/footer-logo.png"
                         alt=""
                     /></a>
                   </div>
@@ -714,7 +733,9 @@
                   </ul>
                   <div class="footer-widget__open-hour">
                     <h3 class="footer-widget__open-hour-title">Open Hours</h3>
-                    <h3 class="footer-widget__open-hour-text">24X7: Service</h3>
+                    <h3 class="footer-widget__open-hour-text">
+                      Always Available, 24/7 All Year Round
+                    </h3>
                   </div>
                 </div>
               </div>
@@ -725,14 +746,14 @@
                 <div
                   class="footer-widget__column footer-widget__gallery clearfix"
                 >
-                  <h3 class="footer-widget__title">Instagram</h3>
+                   
                   <ul
                     class="footer-widget__gallery-list list-unstyled clearfix"
                   >
                     <li>
                       <div class="footer-widget__gallery-img">
                         <img
-                          src="assets/images/resources/footer-widget-gallery-img-1.jpg"
+                          src="../assets/images/resources/footer-widget-gallery-img-1.jpg"
                           alt=""
                         />
                         <a href="#"><span class="fa fa-link"></span></a>
@@ -741,7 +762,7 @@
                     <li>
                       <div class="footer-widget__gallery-img">
                         <img
-                          src="assets/images/resources/footer-widget-gallery-img-2.jpg"
+                          src="../assets/images/resources/footer-widget-gallery-img-2.jpg"
                           alt=""
                         />
                         <a href="#"><span class="fa fa-link"></span></a>
@@ -750,7 +771,7 @@
                     <li>
                       <div class="footer-widget__gallery-img">
                         <img
-                          src="assets/images/resources/footer-widget-gallery-img-3.jpg"
+                          src="../assets/images/resources/footer-widget-gallery-img-3.jpg"
                           alt=""
                         />
                         <a href="#"><span class="fa fa-link"></span></a>
@@ -759,7 +780,7 @@
                     <li>
                       <div class="footer-widget__gallery-img">
                         <img
-                          src="assets/images/resources/footer-widget-gallery-img-4.jpg"
+                          src="../assets/images/resources/footer-widget-gallery-img-4.jpg"
                           alt=""
                         />
                         <a href="#"><span class="fa fa-link"></span></a>
@@ -768,7 +789,7 @@
                     <li>
                       <div class="footer-widget__gallery-img">
                         <img
-                          src="assets/images/resources/footer-widget-gallery-img-5.jpg"
+                          src="../assets/images/resources/footer-widget-gallery-img-5.jpg"
                           alt=""
                         />
                         <a href="#"><span class="fa fa-link"></span></a>
@@ -777,7 +798,7 @@
                     <li>
                       <div class="footer-widget__gallery-img">
                         <img
-                          src="assets/images/resources/footer-widget-gallery-img-6.jpg"
+                          src="../assets/images/resources/footer-widget-gallery-img-6.jpg"
                           alt=""
                         />
                         <a href="#"><span class="fa fa-link"></span></a>
@@ -815,6 +836,18 @@
                       </button>
                     </div>
                   </form>
+
+                  <div id="custom-alert" class="custom-alert">
+                    <span
+                      id="custom-alert-message"
+                      class="custom-alert-content"
+                    ></span>
+                    <div class="progress-bar"></div>
+                    <button id="custom-alert-close" class="custom-alert-close">
+                      Close
+                    </button>
+                  </div>
+
                   <div class="footer-widget__phone">
                     <div class="footer-widget__phone-icon">
                       <span class="icon-telephone"></span>
@@ -855,7 +888,7 @@
 
         <div class="logo-box">
           <a href="index.html" aria-label="logo image"
-            ><img src="assets/images/resources/logo-2.png" width="143" alt=""
+            ><img src="../assets/images/resources/logo-2.png" width="143" alt=""
           /></a>
         </div>
         <!-- /.logo-box -->
@@ -910,36 +943,36 @@
     <a href="#" data-target="html" class="scroll-to-target scroll-to-top"
       ><i class="fa fa-angle-up"></i
     ></a>
-
     <script src="./phone_handler.js"></script>
+    <script src="./email_handler.js"></script>
 
-    <script src="assets/vendors/jquery/jquery-3.6.0.min.js"></script>
-    <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendors/jarallax/jarallax.min.js"></script>
-    <script src="assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
-    <script src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
-    <script src="assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
-    <script src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
-    <script src="assets/vendors/jquery-validate/jquery.validate.min.js"></script>
-    <script src="assets/vendors/nouislider/nouislider.min.js"></script>
-    <script src="assets/vendors/odometer/odometer.min.js"></script>
-    <script src="assets/vendors/swiper/swiper.min.js"></script>
-    <script src="assets/vendors/tiny-slider/tiny-slider.min.js"></script>
-    <script src="assets/vendors/wnumb/wNumb.min.js"></script>
-    <script src="assets/vendors/wow/wow.js"></script>
-    <script src="assets/vendors/isotope/isotope.js"></script>
-    <script src="assets/vendors/countdown/countdown.min.js"></script>
-    <script src="assets/vendors/owl-carousel/owl.carousel.min.js"></script>
-    <script src="assets/vendors/bxslider/jquery.bxslider.min.js"></script>
-    <script src="assets/vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
-    <script src="assets/vendors/vegas/vegas.min.js"></script>
-    <script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
-    <script src="assets/vendors/timepicker/timePicker.js"></script>
-    <script src="assets/vendors/circleType/jquery.circleType.js"></script>
-    <script src="assets/vendors/circleType/jquery.lettering.min.js"></script>
+    <script src="../assets/vendors/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendors/jarallax/jarallax.min.js"></script>
+    <script src="../assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
+    <script src="../assets/vendors/jquery-appear/jquery.appear.min.js"></script>
+    <script src="../assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
+    <script src="../assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="../assets/vendors/jquery-validate/jquery.validate.min.js"></script>
+    <script src="../assets/vendors/nouislider/nouislider.min.js"></script>
+    <script src="../assets/vendors/odometer/odometer.min.js"></script>
+    <script src="../assets/vendors/swiper/swiper.min.js"></script>
+    <script src="../assets/vendors/tiny-slider/tiny-slider.min.js"></script>
+    <script src="../assets/vendors/wnumb/wNumb.min.js"></script>
+    <script src="../assets/vendors/wow/wow.js"></script>
+    <script src="../assets/vendors/isotope/isotope.js"></script>
+    <script src="../assets/vendors/countdown/countdown.min.js"></script>
+    <script src="../assets/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="../assets/vendors/bxslider/jquery.bxslider.min.js"></script>
+    <script src="../assets/vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="../assets/vendors/vegas/vegas.min.js"></script>
+    <script src="../assets/vendors/jquery-ui/jquery-ui.js"></script>
+    <script src="../assets/vendors/timepicker/timePicker.js"></script>
+    <script src="../assets/vendors/circleType/jquery.circleType.js"></script>
+    <script src="../assets/vendors/circleType/jquery.lettering.min.js"></script>
 
     <!-- template js -->
-    <script src="assets/js/insur.js"></script>
+    <script src="../assets/js/insur.js"></script>
   </body>
 </html>
 <script>
