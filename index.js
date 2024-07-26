@@ -51,12 +51,7 @@ app.post("/contact-us", (req, res) => {
   // Validate phone number
   const phoneRegex = /^\d{10}$/;
   if (!phoneRegex.test(phone)) {
-    return res
-      .status(400)
-      .type("html")
-      .send(
-        '<span style="color: red;">Please enter a valid phone number</span>'
-      );
+    return res.send({ message: "worff" });
   }
 
   const text = `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nPhone: ${phone}`;
