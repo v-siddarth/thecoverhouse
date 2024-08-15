@@ -66,7 +66,7 @@ app.post("/contact-us", (req, res) => {
 
   const mailOptions = {
     from: "onlyaddy68@gmail.com",
-    to: "20sdeveloper4209@gmail.com",
+    to: "thecoverhouse1@gmail.com",
     subject: subject,
     text: text,
   };
@@ -97,7 +97,7 @@ app.post("/newsletter", (req, res) => {
 
   const mailOptions = {
     from: "onlyaddy68@gmail.com",
-    to: "20sdeveloper4209@gmail.com",
+    to: "thecoverhouse1@gmail.com",
     subject: "New newsletter subscription",
     text: text,
   };
@@ -130,7 +130,7 @@ function sendMail(name, email, subject, text, res) {
 
   const mailOptions = {
     from: "onlyaddy68@gmail.com",
-    to: "20sdeveloper4209@gmail.com",
+    to: "thecoverhouse1@gmail.com",
     subject: subject,
     text: text,
   };
