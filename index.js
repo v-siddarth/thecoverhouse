@@ -33,8 +33,69 @@ app.post("/send-email", (req, res) => {
 
   const mailOptions = {
     from: "onlyaddy68@gmail.com",
-    to: "20sdeveloper4209@gmail.com",
+    to: "thecoverhouse1@gmail.com",
     subject: subject,
+    text: text,
+  };
+
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      return res.status(500).send({ error: error.toString() });
+    }
+    res.send({ success: true, info });
+  });
+});
+app.post("/agent-form", (req, res) => {
+  const {
+    fullName,
+    address,
+    city,
+    pincode,
+    contactNo,
+    email,
+    experience,
+    qualification,
+    specialization,
+    licenseNo,
+    aadharNo,
+    panCard,
+    introduction,
+  } = req.body;
+
+  const text = `--- Personal Information ---
+  Name:             ${fullName}
+  Address:          ${address}
+  City:             ${city}
+  Pincode:          ${pincode}
+  Contact No:       ${contactNo}
+  Email:            ${email}
+  
+  --- Professional Details ---
+  Experience:       ${experience}
+  Qualification:    ${qualification}
+  Specialization:   ${specialization}
+  License No:       ${licenseNo}
+  
+  --- Identification ---
+  Aadhar No:        ${aadharNo}
+  PAN Card:         ${panCard}
+  
+  --- Self-Introduction ---
+  ${introduction}
+  `;
+
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: "onlyaddy68@gmail.com",
+      pass: "qkto yaph mtui ssag",
+    },
+  });
+
+  const mailOptions = {
+    from: "onlyaddy68@gmail.com",
+    to: "thecoverhouse1@gmail.com",
+    subject: "Agent Information",
     text: text,
   };
 
